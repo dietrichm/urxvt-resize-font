@@ -75,13 +75,13 @@ sub on_user_command {
   if ($string =~ /bigger$/) {
     foreach (@fonts) {
       next if not defined($_->{'default'});
-      update_font_size($self, $_, +2);
+      update_font_size($self, $_, +1);
     }
   }
   elsif ($string =~ /smaller$/) {
     foreach (@fonts) {
       next if not defined($_->{'default'});
-      update_font_size($self, $_, -2);
+      update_font_size($self, $_, -1);
     }
   }
   elsif ($string =~ /reset$/) {
